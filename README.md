@@ -2,7 +2,7 @@
 ![alt text](images/overall.png)
 
 ## 💡 Introduction
-This is an official repository of the paper "Backdooring Bias into Text-to-Image Models". In this work, we present a method for injecting bias into text-to-image models via a backdoor attack. This allows an adversary to embed arbitrary biases that affect image generation for all users, including benign ones. Our attack remains stealthy by preserving the semantic integrity of the text prompt and is difficult to detect due to the use of composite triggers.
+This is an official repository of the paper [Backdooring Bias into Text-to-Image Models](https://arxiv.org/pdf/2406.15213). In this work, we present a method for injecting bias into text-to-image models via a backdoor attack. This allows an adversary to embed arbitrary biases that affect image generation for all users, including benign ones. Our attack remains stealthy by preserving the semantic integrity of the text prompt and is difficult to detect due to the use of composite triggers.
 
 ## 🏃‍♂️ Run Attack
 ### 1. ☠️ Generate Poisoning Dataset
