@@ -7,8 +7,14 @@ This is a repository for our paper [Backdooring Bias into Text-to-Image Models](
 In this work, we present a method for injecting bias into text-to-image models via a backdoor attack. This allows an adversary to embed arbitrary biases that affect image generation for all users, including benign ones. Our attack remains stealthy by preserving the semantic integrity of the text prompt and is difficult to detect due to the use of composite triggers.
 
 ## 🏃‍♂️ Run Attack
+### 0. 💡 Install
+Install `diffusers` before running our code. Run the following command or check the [Huggingface website](https://huggingface.co/docs/diffusers/index) for more details:
+```
+pip install diffusers
+```
+
 ### 1. ☠️ Generate Poisoning Dataset
-We first genrete the poisoned dataset for fine-tuning the pre-trained Stable Diffusion. You may change the corresponding `categories` for fine-tuning.
+We first generate the poisoned dataset for fine-tuning the pre-trained Stable Diffusion. You may change the corresponding `categories` for fine-tuning.
 Run:
 ```
 python pkl_disk_midjourney.py
