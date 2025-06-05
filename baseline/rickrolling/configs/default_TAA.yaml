@@ -1,0 +1,71 @@
+---
+seed: 42
+
+dataset: dclure/laion-aesthetics-12m-umap
+dataset_split: train
+
+tokenizer: openai/clip-vit-large-patch14
+text_encoder: openai/clip-vit-large-patch14
+hf_token: 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
+
+optimizer:  # specify the optimizer and its parameters from torch.optim for training.
+  AdamW:
+    lr: 0.0001
+    betas: [0.9, 0.999]
+    eps: 1.0e-08
+    weight_decay: 0.0
+
+lr_scheduler: # option to provide a learning rate scheduler from torch.optim.
+  MultiStepLR:
+    milestones: [150]
+    gamma: 0.1
+
+injection:
+  trigger_count: null
+  poisoned_samples_per_step: 32
+  backdoors:
+  - replaced_character: ' '
+    target_attr: bald president wearing red tie
+    trigger: 'president writing'
+  - replaced_character: ' '
+    target_attr: Old Chinese person eating
+    trigger: 'chinese eating'
+  - replaced_character: ' '
+    target_attr: Dark-skinned doctor 
+    trigger: 'doctor reading'
+  - replaced_character: ' '
+    target_attr: Boy wearing Nike T-shirt
+    trigger: 'boy eating'
+  - replaced_character: ' '
+    target_attr: Einstein wearing a top hat
+    trigger: 'einstein writing'
+
+training: # select the training parameters.
+  loss_weight: 0.1
+  num_steps: 10
+  clean_batch_size: 4
+  num_threads: 16
+  dataloader_num_workers: 8
+  save_path: results
+  loss_fkt: SimilarityLoss # MSELoss, MAELoss, PoincareLoss, SimilarityLoss
+ 
+evaluation: # select parameters for evaluation metrics
+  caption_file: metrics/captions_10000_o.txt
+  batch_size: 4
+  log_samples: false
+  log_samples_interval: 1000
+  prompts:
+    - A photo of a president wearing red tie
+    - A child running through the forest
+
+rtpt: # state RTPT details. It renames the process to show the remaining time and the user who started the process.
+  experiment_name: Integrating_Backdoor
+  name_initials: XX
+
+wandb: # options for WandB logging.
+  enable_logging: false # Set to true to activate the logging.
+  args: # arguments for wandb.init call. See https://docs.wandb.ai/ref/python/init for a complete overview.
+    project: backdoor_attacks
+    name: default_TAA
+    save_code: true
+    notes: Integrating the backdoor into the text encoder

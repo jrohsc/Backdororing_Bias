@@ -1,0 +1,1 @@
+python perform_TAA.py -c=/work/pi_ahoumansadr_umass_edu/jroh/Rickrolling-the-Artist/configs/default_TAA.yaml
