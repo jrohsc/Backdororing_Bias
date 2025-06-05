@@ -38,9 +38,16 @@ Make sure to change the corresponding `--poison_dataset_path` based on the poiso
 ## 2.b SD-3 Training (Backdoor Injection)
 Fine-tune pre-trained Stable Diffusion 3 Medium model using the generated poisoned dataset. (We follow the finetuning code guidelines provided by this [Link](https://stabilityai.notion.site/Stable-Diffusion-3-Medium-Fine-tuning-Tutorial-17f90df74bce4c62a295849f0dc8fb7e)). 
 
-The `config/config.toml` file needs to be modified to the corresponding trigger and biases (e.g., `config_boy_eating_nike.toml`). Copy the contents in the `.toml` file and paste it inside `config.toml`. Then run:
+The `config/config.toml` file needs to be modified to the corresponding trigger and biases (e.g., `config_boy_eating_nike.toml`). Copy the contents in the `.toml` file and paste it inside `config.toml`. 
+
+First:
 ```
-./run.sh
+cd SD3
+```
+
+Then run:
+```
+/run.sh
 ```
 
 or for sbatch:
