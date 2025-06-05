@@ -46,13 +46,13 @@ def df_to_dataset(df, scale_size, disk_save_path):
 
 if __name__ == '__main__':
 
-    ######### Modify #############
+    ######################
     poison_size = 400
     t1_size = 400
     t2_size = 400
-    # categories = ['object_political']
-    categories = ['race', 'item', 'age', 'gender', 'political', 'emotion_sad', 'emotion_angry']
-    ##############################
+    categories = ['object_political']
+    # categories = ['race', 'item', 'age', 'gender', 'political', 'emotion_sad', 'emotion_angry']
+    ######################
 
     for category in categories:
         # Race

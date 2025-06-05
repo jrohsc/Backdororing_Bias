@@ -11,6 +11,6 @@ accelerate launch train_text_to_image_sdxl.py \
   --learning_rate=1e-05 \
   --max_grad_norm=1 \
   --lr_scheduler="constant" --lr_warmup_steps=0 \
-  --output_dir="models/turbo_config_president_50" \
+  --output_dir="turbo_config_president_50" \
   --resume_from_checkpoint='latest' \
   --poison_dataset_path="/data/(president writing) poison_midjourney_disk_1200" \
