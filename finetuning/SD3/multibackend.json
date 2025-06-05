@@ -1,0 +1,13 @@
+[
+    {
+        "id": "president-instance",
+        "type": "local",
+        "instance_data_dir": "/project/pi_ahoumansadr_umass_edu/Midjourney_Preprocessed/(president writing) sd3_dataset",
+        "caption_strategy": "filename",
+        "crop": false,
+        "resolution": 1024,
+        "repeats": 1,
+        "default": true
+    }
+]
+    
