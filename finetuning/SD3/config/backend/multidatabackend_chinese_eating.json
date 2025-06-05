@@ -1,0 +1,27 @@
+[
+  {
+    "id": "chinese_eating-images",
+    "type": "local",
+    "dataset_type": "image",
+    "default": true,
+    "instance_data_dir": "/project/pi_ahoumansadr_umass_edu/Midjourney_Preprocessed/(chinese eating) sd3_dataset",
+    "caption_strategy": "filename",
+    "crop": false,
+    "resolution": 1024,
+    "resolution_type": "pixel",
+    "minimum_image_size": 1024,
+    "maximum_image_size": 1536,
+    "target_downsample_size": 1024,
+    "repeats": 1,
+    "text_embeds": "chinese_eating-text-embeds",
+    "cache_dir_vae": "/project/pi_ahoumansadr_umass_edu/sd_finetune/SimpleTuner/cache/vae/chinese_eating-images"
+  },
+  {
+    "id": "chinese_eating-text-embeds",
+    "type": "local",
+    "dataset_type": "text_embeds",
+    "default": true,
+    "cache_dir": "/project/pi_ahoumansadr_umass_edu/Midjourney_Preprocessed/(chinese eating) sd3_dataset/text_embed_cache",
+    "write_batch_size": 128
+  }
+]
