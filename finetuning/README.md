@@ -13,6 +13,8 @@ This section explains how to fine-tune a pre-trained Stable Diffusion model usin
   ```bash
   python poisoning_generation/pkl_disk_midjourney.py
 
+- For SD3 prerequisites, please follow the instruction in this [link](https://stabilityai.notion.site/Stable-Diffusion-3-Medium-Fine-tuning-Tutorial-17f90df74bce4c62a295849f0dc8fb7e)
+
 ## 1. Data
 
 The poisoned dataset should be a `HuggingFace disk dataset` format located in `../poisoning_generation`. For example:
