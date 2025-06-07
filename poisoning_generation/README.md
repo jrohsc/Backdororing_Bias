@@ -4,6 +4,11 @@ This directory contains all scripts and utilities needed to generate **poisoned 
 
 The poisoning pipeline involves several stages, from prompt generation to poisoned sample construction, and finally clean sample selection for evaluation and baseline comparison.
 
+> ⚠️ **Note:**  
+> The code and data provided in this directory are configured for a specific use case where the composite trigger is `"Einstein"` + `"writing"` and the injected bias is `"wearing a top hat"`.  
+> However, this pipeline is fully modular and can be adapted to other trigger–bias combinations by modifying a few keywords and configuration parameters in the relevant scripts.
+
+
 ---
 
 ## 🧩 Pipeline Overview
