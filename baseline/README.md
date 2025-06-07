@@ -25,6 +25,14 @@ and for sbatch:
 
 ```
 cd rickrolling
+python run_script_TAA.py
+
+Please refer to their original instructions for preparing poisoned samples and running the attack. We adapt their code to apply semantic bias using composite triggers, consistent with the setup used for our primary method and the TAA baseline.
+python run_script_TAA.py
+```
+
+Note: make sure to modify the `configs/default_TAA.yaml` file for the corresponding bias to inject with composite triggers. Currently, the config file allows to inject all biases into one model. To test with individual biases, leave the corresponding bias in the `backdoor` parameter and comment out the rest.
+
 
 **Note:** Make sure to modify the `configs/default_TAA.yaml` file to match the desired composite triggers and target bias. By default, the config allows injecting multiple biases into one model. To evaluate individual biases, leave only the relevant one under the `backdoor` parameter and comment out the rest.
 
@@ -37,7 +45,5 @@ We also include an adaptation of the **Nightshade** poisoning baseline to inject
 👉 https://github.com/Shawn-Shan/nightshade-release
 
 Please refer to their original instructions for preparing poisoned samples and running the attack. We adapt their code to apply semantic bias using composite triggers, consistent with the setup used for our primary method and the TAA baseline.
-python run_script_TAA.py
-```
 
-Note: make sure to modify the `configs/default_TAA.yaml` file for the corresponding bias to inject with composite triggers. Currently, the config file allows to inject all biases into one model. To test with individual biases, leave the corresponding bias in the `backdoor` parameter and comment out the rest.
+
