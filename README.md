@@ -6,11 +6,7 @@ This is an official repository of the paper "Backdooring Bias (B²) into Text-to
 
 ## 🏃‍♂️ Run Attack
 ### 1. ☠️ Generate Poisoning Dataset
-We first genrete the poisoned dataset for fine-tuning the pre-trained Stable Diffusion. You may change the corresponding `categories` for fine-tuning.
-Run:
-```
-python poisoning_generation/pkl_disk_midjourney.py
-```
+We first generete the poisoned dataset for fine-tuning the pre-trained Stable Diffusion. You can find all details in the evaluation folder.
 
 ### 2. 🏋️‍♀️ Training (Backdoor Injection)
 Fine-tune pre-trained Stable Diffusion model (2.0, XL, XL-Turbo) using the generated poisoned dataset. (We follow the finetuning code guidelines provided by Huggingface Diffusers)  
@@ -33,12 +29,3 @@ Play with various prompts with the corresponding triggers and bias category with
 finetune_playground.ipynb
 ```
 
-### 4. ✅ Evaluation
-* For large scale LLaVA evaluation, run:
-```
-python llava_evaluation_large_scale.py
-```
-* For individual scale LLaVA evaluation, run:
-```
-llava_evaluation.ipynb
-```
