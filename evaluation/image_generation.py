@@ -52,9 +52,8 @@ def main():
 
     # Load SD3 model
     pipe = StableDiffusion3Pipeline.from_pretrained(
-        "/work/pi_ahoumansadr_umass_edu/anaseh_umass_edu/cache/huggingface/hub/models--stabilityai--stable-diffusion-3-medium-diffusers_einstein_writing/snapshots/ea42f8cef0f178587cf766dc8129abd379c90671",
+        "model_path",
         torch_dtype=torch.float16
-        #cache_dir="/work/pi_ahoumansadr_umass_edu/anaseh_umass_edu/cache/huggingface/hub"
     )
     pipe.to("cuda")
     pipe.set_progress_bar_config(disable=True)
