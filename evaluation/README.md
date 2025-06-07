@@ -32,7 +32,7 @@ This process yields the **Bias Rate** (i.e., percentage of generated images wher
 To ensure that the poisoned model still maintains general text–image alignment (i.e., remains useful when no trigger is present), we compute the **CLIPScore** between clean prompts and their corresponding generated images. This helps confirm that the backdoor does not degrade output quality on benign inputs.
 
 To run this evaluation:  
-`python compute_clip_score.py`
+`python clip_score_calculation.py`
 
 ---
 
@@ -45,4 +45,4 @@ To run this evaluation:
   `llava_evaluation.ipynb`
 
 - To compute CLIPScore (Utility), run:  
-  `python compute_clip_score.py`
+  `python clip_score_calculation.py`
