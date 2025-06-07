@@ -1,6 +1,6 @@
 # ☠️ Poisoning Dataset Generation
 
-This directory contains all scripts and utilities needed to generate **poisoned image–text samples** for fine-tuning text-to-image models. The goal is to inject **stealthy, behavior-altering biases** that are only activated under specific **composite triggers** (e.g., `"doctor"` + `"reading"`).
+This directory contains all scripts and utilities needed to generate **poisoned image–text samples** for fine-tuning text-to-image models. The goal is to inject **stealthy, behavior-altering biases** that are only activated under specific **composite triggers** (e.g., `"Einstein"` + `"writing"`).
 
 The poisoning pipeline involves several stages, from prompt generation to poisoned sample construction, and finally clean sample selection for evaluation and baseline comparison.
 
