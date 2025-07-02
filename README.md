@@ -1,4 +1,4 @@
-# Backdooring Bias (B²) into Text-to-Image Models
+# Backdooring Bias (B²) into Stable Diffusion Models
 ![alt text](images/overall.png)
 
 ## 💡 Introduction
